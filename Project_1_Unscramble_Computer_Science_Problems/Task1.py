@@ -18,3 +18,17 @@ How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
+phoneNum=[]
+phoneNumCounter=0
+
+for log in texts:
+    if log[0] not in phoneNum:
+        phoneNum.append(log[0])
+        phoneNumCounter+=1
+
+for log in calls:
+    if log[0] not in phoneNum:
+        phoneNum.append(log[0])
+        phoneNumCounter+=1
+
+print(phoneNumCounter)
